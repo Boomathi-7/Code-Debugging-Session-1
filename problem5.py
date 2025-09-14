@@ -1,9 +1,9 @@
 # Problem5: Given a list of intervals, merge overlapping intervals.
 
-def merge_intervals(intervals):
-    intervals.sort()
-    merged = [intervals[0]]
-    for current in intervals[1:]:
+def merge_intervals(interval):
+    interval.sort()
+    merged = [interval[0]]
+    for current in interval[1:]:
         last = merged[-1]
         if current[0] <= last[1]:
             last[1] = current[1]
