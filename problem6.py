@@ -1,9 +1,9 @@
 # Problem6: Given a string containing '(', ')', '{', '}', '[' and ']', determine if the input is valid (all brackets are closed properly).
 
-def is_balanced(str):
+def is_balanced(sym):
     stack = []
     mapping = {')':'(', '}':'{', ']':'['}
-    for char in str:
+    for char in sym:
         if char in mapping.values():
             stack.append(char)
         elif char in mapping.keys():
